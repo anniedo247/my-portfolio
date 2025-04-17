@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $primary;
+  scrollbar-width: thin;
+  scrollbar-color: $secondaryMedium $secondary;
+
+  &::-webkit-scrollbar {
+    width: 8px; // Set width
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondaryMedium; // Scrollbar color
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $secondary; // Track color
+  }
+}
